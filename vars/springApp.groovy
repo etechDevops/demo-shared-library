@@ -25,7 +25,8 @@ pipeline {
            }
            stage("Running Testcase") {
               steps {
-                   sh "mvn test"
+                   sh 'mvn test'
+                   sh 'mvn -v'
                }
            }
            stage("Packing Application") {
