@@ -19,20 +19,9 @@ pipeline {
            }
            stage("Cleaning workspace") {
                steps {
-                   sh "mvn clean"
-               }
-           }
-           stage("Running Testcase") {
-              steps {
-                   sh 'mvn test'
-                   sh 'mvn -v'
-               }
-           }
-           stage("Packing Application") {
-               steps {
-                   sh "mvn package -DskipTests"
+                   sh "mvn -v"
                }
            }
        }
- }
+}
 }
