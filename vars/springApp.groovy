@@ -1,3 +1,4 @@
+def call(String repoUrl){
 pipeline {
        agent any
        tools {
@@ -14,7 +15,7 @@ pipeline {
            stage("Checkout Code") {
                steps {
                    git branch: 'main',
-                       url: "https://github.com/iamvickyav/spring-boot-data-H2-embedded.git"
+                          url: "${repoUrl}"
                }
            }
            stage("Cleaning workspace") {
@@ -34,3 +35,4 @@ pipeline {
            }
        }
  }
+}
